@@ -4,3 +4,4 @@ class bank_customer(BaseModel):
     param2: float
     param3: float
     param4: float
+
