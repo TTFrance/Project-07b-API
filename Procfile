@@ -1,1 +1,1 @@
-worker: uvicorn app:app
+worker: uvicorn app:app --workers 1
