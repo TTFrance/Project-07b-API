@@ -11,6 +11,7 @@ import numpy as np
 import pickle
 import pandas as pd
 import joblib
+from lightgbm import LGBMClassifier
 
 # Create the app object
 app = FastAPI()
