@@ -42,7 +42,7 @@ def predict_default(SK_ID_CURR:int):
 
 @app.get('/getids/{SK_ID_CURR}')
 def getids():
-    return df.index.values.tolist()
+    return df.index.sort_values().values.tolist()
 
 # Run the API with uvicorn
 #    Will run on http://127.0.0.1:8000
