@@ -26,7 +26,7 @@ def index():
     return {'message': 'OCP7API'}
 
 @app.get('/predict/{SK_ID_CURR}')
-def predict_default(SK_ID_CURR:int):
+def predict_default_risk(SK_ID_CURR:int):
     if SK_ID_CURR in df.index:
         # retrieve client id from the GET
         client = df.loc[[SK_ID_CURR]].drop(columns=['TARGET'])
@@ -40,7 +40,7 @@ def predict_default(SK_ID_CURR:int):
         'prediction': default_proba
     }
 
-@app.get('/getids/{SK_ID_CURR}')
+@app.get('/getids/')
 def getids():
     return df.index.sort_values().values.tolist()
 
