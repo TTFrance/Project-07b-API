@@ -18,7 +18,7 @@ app = FastAPI()
 # load the model
 model = joblib.load('model/best_LGB_10k_Undersampled_BestParams.pkl')
 #load the X_train dataframe
-df = pd.read_pickle('data/client_data_api_dashboard_1k_500g_500b.pkl.pkl')
+df = pd.read_pickle('data/client_data_api_dashboard_1k_500g_500b.pkl')
 
 # Index route, opens automatically on http://127.0.0.1:8000
 @app.get('/')
